@@ -46,7 +46,20 @@ public class DoctorServiceImpl implements DoctorService{
 
         Optional<Doctor> doctorResult = doctorRepository.findById(doctor.getId());
         if(doctorResult.isPresent()){
-            Doctor d = new Doctor(doctor.getId(), doctor.getName(),doctor.getHospital(), doctor.getSpeciality());
+            Doctor d =
+                    new Doctor(
+                            doctor.getId(),
+                            doctor.getName(),
+                            doctor.getAge(),
+                            doctor.getGender(),
+                            doctor.getEmail(),
+                            doctor.getAadhaar(),
+                            doctor.getMobile(),
+                            doctor.getAddress(),
+                            doctor.getAreaCode(),
+                            doctor.getHospital(),
+                            doctor.getSpeciality()
+                    );
             doctorRepository.save(d);
         }else{
             throw new ApiRequestException(String.format("Doctor with doctor %s not found!", doctor.getId()));

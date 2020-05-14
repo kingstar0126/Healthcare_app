@@ -15,10 +15,7 @@ public class DoctorDaoImpl implements DoctorDao {
     static {
         doctors = new HashMap<String, Doctor>(){
             {
-                put("1", new Doctor("01", "Thulsi", "Bangalore", new String[]{"Gynecologist"}));
-                put("2", new Doctor("02", "Samhitha", "Hosur Government", new String[]{"Pediatrics"}));
-                put("3", new Doctor("03", "Srihitha", "Bangalore Government", new String[]{"Gynecologist"}));
-            }
+                put("1", new Doctor("01", "Thulsi", "31", "Female", "thulsi@gmail.com", "1239245214324", "9241302342", "Bangalore", "560059", "Bangalore", new String[]{"Gynecologist"}));            }
         };
     }
 
